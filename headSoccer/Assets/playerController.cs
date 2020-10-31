@@ -10,9 +10,12 @@ public class playerController : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
+    GameObject Boot;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        Boot = GameObject.Find("Boot");
     }
 
     void Update()
@@ -23,5 +26,24 @@ public class playerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f){
             _rigidbody.AddForce(new Vector2(0,JumpForce), ForceMode2D.Impulse);
         }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Ball")
+        {
+            Debug.Log("start corutine");
+            StartCoroutine("WaitSeconds");
+        }
+    }
+
+    IEnumerator WaitSeconds()
+    {
+        Boot.transform.rotation = Quaternion.Euler(0, 0, 25);
+        Debug.Log("corutine");
+        yield return new WaitForSeconds(0.5f);
+
+        Boot.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

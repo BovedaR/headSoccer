@@ -44,7 +44,8 @@ public class goalController : MonoBehaviour
 
             //TODO: Congelar pelota X tiempo
             Ball.transform.position = new Vector3(0, 3, 0);
-
+            Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         }
     }
 
