@@ -26,24 +26,24 @@ public class playerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f){
             _rigidbody.AddForce(new Vector2(0,JumpForce), ForceMode2D.Impulse);
         }
-
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.name == "Ball")
+        if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("start corutine");
+            
             StartCoroutine("WaitSeconds");
         }
+
     }
+
+   
 
     IEnumerator WaitSeconds()
     {
-        Boot.transform.rotation = Quaternion.Euler(0, 0, 25);
+        Boot.transform.rotation = Quaternion.Euler(0, 0, 40);
+        Boot.transform.position = new Vector2(Boot.transform.position.x + 0.7f, Boot.transform.position.y);
         Debug.Log("corutine");
         yield return new WaitForSeconds(0.5f);
 
         Boot.transform.rotation = Quaternion.Euler(0, 0, 0);
+        Boot.transform.position = new Vector2(Boot.transform.position.x - 0.7f, Boot.transform.position.y);
     }
 }
