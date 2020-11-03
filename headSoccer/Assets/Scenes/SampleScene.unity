@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 125641400}
   - component: {fileID: 125641399}
   - component: {fileID: 125641401}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 5
   JumpForce: 5
+  anim: {fileID: 2022442357}
 --- !u!212 &349946351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349946349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.67, y: -3.07, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
@@ -1589,7 +1590,8 @@ GameObject:
   - component: {fileID: 2022442356}
   - component: {fileID: 2022442358}
   - component: {fileID: 2022442359}
-  m_Layer: 0
+  - component: {fileID: 2022442357}
+  m_Layer: 8
   m_Name: Boot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1604,12 +1606,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022442355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -1.38, z: 0}
-  m_LocalScale: {x: 1.0065607, y: 1.2008312, z: 1}
+  m_LocalPosition: {x: 1, y: -1.36, z: 0}
+  m_LocalScale: {x: 1.2278131, y: 1.3884149, z: 1}
   m_Children: []
   m_Father: {fileID: 349946352}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2022442357
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022442355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b839012097106f944abc2d2f125f81f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2022442358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1670,7 +1691,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2022442355}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8e2ac7fe2f76322448762c76bb702a2e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1686,25 +1707,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.099999994, y: -0.82}
-      - {x: 0.21599148, y: -0.80013114}
-      - {x: 0.28163457, y: -0.8034043}
-      - {x: 0.34383357, y: -0.8057686}
-      - {x: 0.42396474, y: -0.8002199}
-      - {x: 0.62797326, y: -0.8001321}
-      - {x: 0.7121846, y: -0.794754}
-      - {x: 0.7135701, y: -0.71154666}
-      - {x: 0.7112806, y: -0.5975105}
-      - {x: 0.7518477, y: -0.5987009}
-      - {x: 0.76862603, y: -0.5984454}
-      - {x: 0.7819885, y: -0.6007462}
-      - {x: 0.78837043, y: -0.59796244}
-      - {x: 0.86236376, y: -0.5195261}
-      - {x: 0.8621153, y: -0.41272092}
-      - {x: 0.853921, y: -0.36294025}
-      - {x: 0.8238773, y: -0.21804973}
-      - {x: 0.71788466, y: -0.15307188}
-      - {x: 0.5557279, y: -0.052633107}
+    - - {x: 0.35933214, y: -0.56591314}
+      - {x: 0.8579321, y: -0.54665816}
+      - {x: 0.8661703, y: -0.54192424}
+      - {x: 0.57718986, y: -0.12854965}
+      - {x: 0.3398607, y: 0.054150734}
       - {x: 0.33193925, y: 0.0580689}
       - {x: 0.13792954, y: 0.16885915}
       - {x: -0.018149413, y: 0.28493443}
@@ -1713,13 +1720,8 @@ PolygonCollider2D:
       - {x: -0.5702198, y: 0.51739156}
       - {x: -1.0157037, y: -0.0020115823}
       - {x: -1.0038772, y: -0.18956123}
-      - {x: -0.9969665, y: -0.48918605}
-      - {x: -0.9978846, y: -0.65065813}
-      - {x: -0.81400853, y: -0.6701316}
-      - {x: -0.6609953, y: -0.6995069}
-      - {x: -0.4743607, y: -0.73462677}
-      - {x: -0.31312653, y: -0.750375}
-      - {x: -0.2640522, y: -0.7798245}
-      - {x: -0.2021142, y: -0.7899556}
-      - {x: -0.14999999, y: -0.8154166}
-      - {x: -0.12, y: -0.82}
+      - {x: -1.0056343, y: -0.47933266}
+      - {x: -0.89925224, y: -0.51251197}
+      - {x: -0.6919925, y: -0.55559355}
+      - {x: -0.374733, y: -0.5755611}
+      - {x: -0.11225022, y: -0.57329124}
