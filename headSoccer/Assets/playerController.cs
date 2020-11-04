@@ -22,7 +22,7 @@ public class playerController : MonoBehaviour
     {
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
-
+        Physics2D.IgnoreLayerCollision(8, 9);
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
