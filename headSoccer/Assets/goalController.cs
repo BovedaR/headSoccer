@@ -9,12 +9,14 @@ public class goalController : MonoBehaviour
 
     GameObject Ball;
     GameObject Player1;
+    GameObject Player2;
 
     // Start is called before the first frame update
     void Start()
     {
         Ball = GameObject.Find("Ball");
         Player1 = GameObject.Find("Player1");
+        Player2 = GameObject.Find("Player2");
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class goalController : MonoBehaviour
 
             //TODO: Player2
             Player1.transform.position = new Vector3(-6, -4, 0);
+            Player2.transform.position = new Vector3(6, -4, 0);
 
             //TODO: Congelar pelota X tiempo
             Ball.transform.position = new Vector3(0, 3, 0);
