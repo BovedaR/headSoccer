@@ -7,9 +7,10 @@ public class goalController : MonoBehaviour
     public static int player1Goals = 0;
     public static int player2Goals = 0;
 
-    GameObject Ball;
-    GameObject Player1;
-    GameObject Player2;
+    private GameObject Ball;
+    private GameObject Player1;
+    private GameObject Player2;
+    private GameObject Confetti;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class goalController : MonoBehaviour
         Ball = GameObject.Find("Ball");
         Player1 = GameObject.Find("Player1");
         Player2 = GameObject.Find("Player2");
+        Confetti = GameObject.Find("Confetti");
+        Confetti.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -25,7 +28,6 @@ public class goalController : MonoBehaviour
 
     }
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Ball")
@@ -33,23 +35,29 @@ public class goalController : MonoBehaviour
             if (this.name == "goal_1")
             {
                 player1Goals++;
-                Debug.Log(player1Goals);
             }
             else
             {
                 player2Goals++;
-                Debug.Log(player2Goals);
             }
 
-            //TODO: Player2
-            Player1.transform.position = new Vector3(-6, -4, 0);
-            Player2.transform.position = new Vector3(6, -4, 0);
-
-            //TODO: Congelar pelota X tiempo
-            Ball.transform.position = new Vector3(0, 3, 0);
-            Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+            StartCoroutine("goalAction");
         }
     }
 
+    IEnumerator goalAction()
+    {   
+        Confetti.GetComponent<ParticleSystem>().Play();
+
+        yield return new WaitForSeconds(2);
+
+        Confetti.GetComponent<ParticleSystem>().Stop();
+
+        Player1.transform.position = new Vector3(-6, -4, 0);
+        Player2.transform.position = new Vector3(6, -4, 0);
+
+        Ball.transform.position = new Vector3(0, 3, 0);
+        Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+    }
 }

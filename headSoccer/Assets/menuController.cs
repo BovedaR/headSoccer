@@ -17,7 +17,7 @@ public class menuController : MonoBehaviour
     {
         string path = Directory.GetCurrentDirectory();
         var equipos = Directory
-                .EnumerateFiles(path + "/Assets/equipos", "*.png", SearchOption.AllDirectories)
+                .EnumerateFiles(path + "/Assets/Resources/equipos", "*.png", SearchOption.AllDirectories)
                 .Select(Path.GetFileNameWithoutExtension);
 
         //jugador 1
@@ -51,7 +51,7 @@ public class menuController : MonoBehaviour
 
 
         var canchas = Directory
-                .EnumerateFiles(path + "/Assets/canchas", "*.png", SearchOption.AllDirectories)
+                .EnumerateFiles(path + "/Assets/Resources/canchas", "*.png", SearchOption.AllDirectories)
                 .Select(Path.GetFileNameWithoutExtension);
         cancha = equipos.First();
         var dropdownCancha = GameObject.Find("ddCancha").GetComponent<Dropdown>();
@@ -78,6 +78,7 @@ public class menuController : MonoBehaviour
         if (dropdown.name == "ddPlayer1")
         {
             player1Cancha = dropdown.captionText.text;
+            //Debug.Log(dropdown.value);
         }
         else if (dropdown.name == "ddPlayer2")
         {
