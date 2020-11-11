@@ -48,7 +48,8 @@ public class goalController : MonoBehaviour
     IEnumerator goalAction()
     {   
         Confetti.GetComponent<ParticleSystem>().Play();
-
+        Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         yield return new WaitForSeconds(2);
 
         Confetti.GetComponent<ParticleSystem>().Stop();
@@ -57,7 +58,6 @@ public class goalController : MonoBehaviour
         Player2.transform.position = new Vector3(6, -4, 0);
 
         Ball.transform.position = new Vector3(0, 3, 0);
-        Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+        
     }
 }
