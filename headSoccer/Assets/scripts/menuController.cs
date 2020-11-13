@@ -3,68 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 using System.IO;
 using System.Linq;
 
 public class menuController : MonoBehaviour
 {
-    public static string player1Cancha;
-    public static string player2Cancha;
-    public static string cancha;
+    private static GameObject mainMenu, controls, selection;
+    private static TextMeshProUGUI screenName;
+    public static Stack selectionStack = new Stack();
+
 
     // Start is called before the first frame update
     void Start()
     {
-        string path = Directory.GetCurrentDirectory();
-        var equipos = Directory
-                .EnumerateFiles(path + "/Assets/Resources/equipos", "*.png", SearchOption.AllDirectories)
-                .Select(Path.GetFileNameWithoutExtension);
+       
+        mainMenu = this.gameObject.transform.GetChild(0).gameObject;
+        controls = this.gameObject.transform.GetChild(1).gameObject;
+        selection = this.gameObject.transform.GetChild(2).gameObject;
+        screenName = selection.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>();
 
-        //jugador 1
-        player1Cancha = equipos.First();
-        var dropdownPlayer1 = GameObject.Find("ddPlayer1").GetComponent<Dropdown>();
-        dropdownPlayer1.options.Clear();
-        foreach (string option in equipos)
-        {
-            dropdownPlayer1.options.Add(new Dropdown.OptionData(option));
-        }
-
-        dropdownPlayer1.onValueChanged.AddListener(delegate
-        {
-            onDropdownChange(dropdownPlayer1);
-        });
-
-
-        //jugador 2
-        player2Cancha = equipos.First();
-        var dropdownPlayer2 = GameObject.Find("ddPlayer2").GetComponent<Dropdown>();
-        dropdownPlayer2.options.Clear();
-        foreach (string option in equipos)
-        {
-            dropdownPlayer2.options.Add(new Dropdown.OptionData(option));
-        }
-
-        dropdownPlayer2.onValueChanged.AddListener(delegate
-        {
-            onDropdownChange(dropdownPlayer2);
-        });
-
-
-        var canchas = Directory
-                .EnumerateFiles(path + "/Assets/Resources/canchas", "*.png", SearchOption.AllDirectories)
-                .Select(Path.GetFileNameWithoutExtension);
-        cancha = equipos.First();
-        var dropdownCancha = GameObject.Find("ddCancha").GetComponent<Dropdown>();
-        dropdownCancha.options.Clear();
-        foreach (string option in canchas)
-        {
-            dropdownCancha.options.Add(new Dropdown.OptionData(option));
-        }
-
-        dropdownCancha.onValueChanged.AddListener(delegate
-        {
-            onDropdownChange(dropdownCancha);
-        });
+        //default start
+        mainMenu.SetActive(true);
+        controls.SetActive(false);
+        selection.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,21 +35,64 @@ public class menuController : MonoBehaviour
         
     }
 
-    void onDropdownChange(Dropdown dropdown)
+    public void onButtonClick(string actionName)
     {
-        if (dropdown.name == "ddPlayer1")
+        switch (actionName)
         {
-            player1Cancha = dropdown.captionText.text;
-            //Debug.Log(dropdown.value);
-        }
-        else if (dropdown.name == "ddPlayer2")
-        {
-            player2Cancha = dropdown.captionText.text;
-        }
-        else
-        {
-            cancha = dropdown.captionText.text;
-            Debug.Log(cancha);
+            case "controls":
+                controls.SetActive(true);
+                mainMenu.SetActive(false);
+                selection.SetActive(false);
+                break;
+            case "playMenu":
+                selection.SetActive(true);
+                controls.SetActive(false);
+                mainMenu.SetActive(false);
+
+                selectionStack.Push(0); //default player1 es 0 index, argentinos
+                break;
+            case "backControls":
+                mainMenu.SetActive(true);
+                selection.SetActive(false);
+                controls.SetActive(false);
+                break;
+            case "backSelection":
+                if (selectionStack.Count == 1)
+                {
+                    mainMenu.SetActive(true);
+                    selection.SetActive(false);
+                    controls.SetActive(false);
+                }
+                else if(selectionStack.Count == 2)
+                {
+                    screenName.text = "PLAYER 1:";
+                }
+                else
+                {
+                    screenName.text = "PLAYER 2:";
+                }
+                selectionStack.Pop();
+                break;
+            case "nextSelection":
+                if (selectionStack.Count == 1)
+                {
+                    screenName.text = "PLAYER 2:";
+                    selectionStack.Push(0); //default player1 es 0 index, argentinos
+                }
+                else if (selectionStack.Count == 2)
+                {
+                    screenName.text = "STADIUM:";
+                    selectionStack.Push(0); //default player1 es 0 index, argentinos
+                }
+                else
+                {
+                    CambiarEscena();
+                }
+                break;
+            default:
+                selectionStack.Pop();
+                selectionStack.Push(actionName);
+                break;
         }
     }
 

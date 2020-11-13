@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class playerController : MonoBehaviour
 {
@@ -13,35 +15,45 @@ public class playerController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private AudioSource kickSource;
 
-    private SpriteRenderer spriteR;
-    private Sprite[] sprites;
+    private Sprite[] spritesEquipos;
+    private Sprite[] spritesCanchas;
 
     void Start()
     {
         kickSource = this.GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
+
+        spritesEquipos = Resources.LoadAll<Sprite>("equipos");
+        spritesCanchas = Resources.LoadAll<Sprite>("canchas");
+
         if (this.name == "Player1")
         {
             horizontalAxis = "Horizontal";
             kick = "Fire1";
             jump = "Jump";
 
-            //TODO: SELECCIONAR EQUIPO SPRITE IMAGE
-            spriteR = this.GetComponent<SpriteRenderer>();
-            sprites = Resources.LoadAll<Sprite>("equipos");
-            spriteR.sprite = sprites[0];
-            //Debug.Log(sprites.IndexOf("boca"));
+            SpriteRenderer spriteR = this.GetComponent<SpriteRenderer>();
+            var spriteIndex = Int32.Parse(Convert.ToString(menuController.selectionStack.ToArray()[2]));
+            spriteR.sprite = spritesEquipos[spriteIndex];
         }
-        else
+        else if(this.name == "Player2")
         {
-
-            //TODO: SELECCIONAR EQUIPO SPRITE IMAGE PLAYER 2
             horizontalAxis = "Horizontal2";
             kick = "Fire2";
             jump = "Jump2";
+
+            SpriteRenderer spriteR = this.GetComponent<SpriteRenderer>();
+            var spriteIndex = Int32.Parse(Convert.ToString(menuController.selectionStack.ToArray()[1]));
+            spriteR.sprite = spritesEquipos[spriteIndex];
+        }
+        else
+        {
+            var spriteIndex = Int32.Parse(Convert.ToString(menuController.selectionStack.ToArray()[0]));
+            var spriteR = this.GetComponent<Image> ();
+            spriteR.sprite = spritesCanchas[spriteIndex];
         }
 
-        //TODO: SELECCIONAR CANCHA SPRITE IMAGE
+
     }
 
     void Update()

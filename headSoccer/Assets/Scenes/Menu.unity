@@ -207,14 +207,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 7
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &3807039
@@ -753,14 +753,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: nextSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &97940316
@@ -960,14 +960,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: backControls
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &131227883
@@ -1092,14 +1092,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 19
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &141319691
@@ -1374,14 +1374,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 10
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &223096759
@@ -2754,14 +2754,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 15
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &618640716
@@ -3095,14 +3095,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 9
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &664579408
@@ -3302,14 +3302,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 8
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &715030141
@@ -4042,14 +4042,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &873332119
@@ -4442,14 +4442,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 13
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &991634485
@@ -4516,17 +4516,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999801107}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.009225662, w: 0.99995744}
   m_LocalPosition: {x: 0, y: 0, z: 403.8404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151031278}
   m_Father: {fileID: 730892885}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.057}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169, y: 77}
+  m_AnchoredPosition: {x: 169.00052, y: 76.9999}
   m_SizeDelta: {x: 48.069717, y: 44.073227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999801109
@@ -4574,14 +4574,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &999801110
@@ -4706,14 +4706,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 12
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1048189898
@@ -6015,14 +6015,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1306546183
@@ -6451,14 +6451,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 17
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1438736537
@@ -6794,14 +6794,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 11
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1477747853
@@ -7151,14 +7151,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: playMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1540358341
@@ -7415,14 +7415,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 15
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1597385992
@@ -7626,14 +7626,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 14
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1633627088
@@ -7758,14 +7758,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1636880993
@@ -8099,14 +8099,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 16
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1655284915
@@ -8406,6 +8406,7 @@ GameObject:
   - component: {fileID: 1694020553}
   - component: {fileID: 1694020552}
   - component: {fileID: 1694020551}
+  - component: {fileID: 1694020555}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8495,6 +8496,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1694020555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694020550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f90cc6580cd80648870aa331a88d949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728688405
 GameObject:
   m_ObjectHideFlags: 0
@@ -8579,14 +8592,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1728688408
@@ -8777,14 +8790,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: controls
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1754496952
@@ -8861,8 +8874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -126.29999, y: -20}
-  m_SizeDelta: {x: 48.069717, y: 44.073227}
+  m_AnchoredPosition: {x: -125.6, y: -20}
+  m_SizeDelta: {x: 46.66162, y: 44.073227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773038726
 MonoBehaviour:
@@ -8909,14 +8922,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 14
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1773038727
@@ -9323,14 +9336,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 18
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1884726147
@@ -9796,14 +9809,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: backSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2011942602
@@ -9928,14 +9941,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2042640069
@@ -10060,14 +10073,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 983741681}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
+        m_MethodName: onButtonClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2047366487

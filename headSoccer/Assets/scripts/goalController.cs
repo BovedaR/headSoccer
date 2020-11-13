@@ -11,10 +11,14 @@ public class goalController : MonoBehaviour
     private GameObject Player1;
     private GameObject Player2;
     private GameObject Confetti;
+    private AudioSource goalSource;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        goalSource = this.GetComponent<AudioSource>();
+
         Ball = GameObject.Find("Ball");
         Player1 = GameObject.Find("Player1");
         Player2 = GameObject.Find("Player2");
@@ -40,7 +44,7 @@ public class goalController : MonoBehaviour
             {
                 player2Goals++;
             }
-
+            goalSource.Play();
             StartCoroutine("goalAction");
         }
     }
