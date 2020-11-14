@@ -36,7 +36,7 @@ public class goalController : MonoBehaviour
     {
         if (other.gameObject.name == "Ball")
         {
-            if (this.name == "goal_1")
+            if (this.name == "net1")
             {
                 player1Goals++;
             }
@@ -54,7 +54,7 @@ public class goalController : MonoBehaviour
         Confetti.GetComponent<ParticleSystem>().Play();
         Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Ball.GetComponent<Rigidbody2D>().angularVelocity = 0f;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         Confetti.GetComponent<ParticleSystem>().Stop();
 
