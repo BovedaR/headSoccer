@@ -17,11 +17,19 @@ public class textController : MonoBehaviour
     {
         if (this.name == "player1Text")
         {
-            instruction.text = goalController.player2Goals.ToString();
+            instruction.text = goalController.player1Goals.ToString();
         }
         else if (this.name == "player2Text")
         {
-            instruction.text  = goalController.player1Goals.ToString();
+            instruction.text  = goalController.player2Goals.ToString();
+        }
+        if (this.name == "player1TextS")
+        {
+            instruction.text = goalController.player1Goals.ToString();
+        }
+        else if (this.name == "player2TextS")
+        {
+            instruction.text = goalController.player2Goals.ToString();
         }
     }
 }
