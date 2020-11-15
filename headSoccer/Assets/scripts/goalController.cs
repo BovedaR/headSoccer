@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class goalController : MonoBehaviour
 {
@@ -38,10 +40,20 @@ public class goalController : MonoBehaviour
         {
             if (this.name == "net1")
             {
+                if (player1Goals + 1 == menuController.golesCant)
+                {
+                    player1Goals++;
+                    SceneManager.LoadScene("Resultado");
+                }
                 player1Goals++;
             }
             else
             {
+                if (player2Goals + 1 == menuController.golesCant)
+                {
+                    player2Goals++;
+                    SceneManager.LoadScene("Resultado");
+                }
                 player2Goals++;
             }
             goalSource.Play();

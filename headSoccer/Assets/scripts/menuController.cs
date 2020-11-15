@@ -6,18 +6,18 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System.Linq;
+using System;
 
 public class menuController : MonoBehaviour
 {
     private static GameObject mainMenu, controls, selection;
     private static TextMeshProUGUI screenName;
     public static Stack selectionStack = new Stack();
-
+    public static int golesCant=5;
 
     // Start is called before the first frame update
     void Start()
     {
-       
         mainMenu = this.gameObject.transform.GetChild(0).gameObject;
         controls = this.gameObject.transform.GetChild(1).gameObject;
         selection = this.gameObject.transform.GetChild(2).gameObject;
@@ -33,6 +33,11 @@ public class menuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void userInputHandler(string input)
+    {
+        golesCant = Int16.Parse(input);
     }
 
     public void onButtonClick(string actionName)
