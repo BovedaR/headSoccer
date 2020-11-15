@@ -40,18 +40,28 @@ public class goalController : MonoBehaviour
         {
             if (this.name == "net1")
             {
-                player1Goals++;
+                
                 if (player1Goals + 1 == menuController.golesCant)
                 {
+                    player1Goals++;
                     SceneManager.LoadScene("Resultado");
+                }
+                else
+                {
+                    player1Goals++;
                 }
             }
             else
             {
-                player2Goals++;
+               
                 if (player2Goals + 1 == menuController.golesCant)
                 {
+                    player2Goals++;
                     SceneManager.LoadScene("Resultado");
+                }
+                else
+                {
+                    player2Goals++;
                 }
             }
             goalSource.Play();

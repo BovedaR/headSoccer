@@ -91,7 +91,7 @@ public class menuController : MonoBehaviour
                 }
                 else
                 {
-                    CambiarEscena();
+                    CambiarEscena("Juego");
                 }
                 break;
             default:
@@ -101,8 +101,12 @@ public class menuController : MonoBehaviour
         }
     }
 
-    public void CambiarEscena()
+    public void CambiarEscena(string escena)
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene(escena);
+        //resets en PLAYAGAIN
+        goalController.player1Goals = 0;
+        goalController.player2Goals = 0;
+        if (escena == "Menu"){ selectionStack = new Stack(); }
     }
 }

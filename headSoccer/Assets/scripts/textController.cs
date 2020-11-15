@@ -15,21 +15,29 @@ public class textController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.name == "player1Text")
+        switch (this.name)
         {
-            instruction.text = goalController.player1Goals.ToString();
-        }
-        else if (this.name == "player2Text")
-        {
-            instruction.text  = goalController.player2Goals.ToString();
-        }
-        if (this.name == "player1TextS")
-        {
-            instruction.text = goalController.player1Goals.ToString();
-        }
-        else if (this.name == "player2TextS")
-        {
-            instruction.text = goalController.player2Goals.ToString();
+            case "player1Text":
+                instruction.text = goalController.player1Goals.ToString();
+                break;
+            case "player2Text":
+                instruction.text = goalController.player2Goals.ToString();
+                break;
+            case "player1TextS":
+                instruction.text = goalController.player1Goals.ToString();
+                break;
+            case "player2TextS":
+                instruction.text = goalController.player2Goals.ToString();
+                break;
+            case "playerWins":
+                if (goalController.player1Goals > goalController.player2Goals){
+                    instruction.text = $"PLAYER 1 WINS ({goalController.player1Goals.ToString()} - {goalController.player2Goals.ToString()})";
+                }
+                else
+                {
+                    instruction.text = $"PLAYER 2 WINS ({goalController.player2Goals.ToString()} - {goalController.player1Goals.ToString()})";
+                }
+                break;
         }
     }
 }
